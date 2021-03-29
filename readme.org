@@ -24,3 +24,16 @@ To get started copy the following lines of code line by line:
 The code above will clone webacs into your home directory and setup your Emacs init file ready for use.
 Once this is done, open Emacs to finish the setup of webacs.
 You can safely ignore the warnings that popup, they are from the configuration theme looking for neotree but treemacs is used instead.
+
+* packages
+The packages that webacs uses:
+
+- [[https://github.com/jwiegley/use-package][use-package]]
+- [[https://github.com/purcell/exec-path-from-shell][exec-path-from-shell]]
+- [[https://github.com/domtronn/all-the-icons.el][all-the-icons]]
+- [[https://github.com/Alexander-Miller/treemacs][treemacs]]
+- [[https://github.com/seagle0128/doom-modeline][doom-modeline]]
+- [[https://github.com/hlissner/emacs-doom-themes][doom-themes]]
+- [[https://github.com/magit/magit][magit]]
+- [[https://github.com/company-mode/company-mode][company-mode]]
+- [[https://github.com/emacs-lsp/lsp-mode][lsp-mode]]
