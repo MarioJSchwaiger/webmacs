@@ -5,28 +5,6 @@ ERROR='\033[0;31m'
 SUCCESS='\033[0;32m'
 WHITE='\033[1;37m'
 
-# Installing Node.js dependencies
-echo "Checking Node.js is installed"
-
-if !command -v node &> /dev/null
-then
-    echo "${ERROR}Error: Node.js not installed, please install Node.js before using Webacs"
-    exit
-fi
-
-echo "${SUCCESS}Node.js installed"
-echo "${WHITE}Proceeding with installing Node.js dependencies"
-
-npm install -g typescript-language-server typescript vscode-html-languageserver-bin vscode-css-languageserver-bin vscode-json-languageserver
-
-if [ $? -ne 0 ];
-then
-    echo "${ERROR}Error installing dependencies, try running script with sudo"
-    exit
-fi
-
-echo "${SUCCESS}Dependencies installed"
-
 # Initializing Emacs
 echo "\n${WHITE}Checking Emacs is installed"
 
@@ -38,7 +16,7 @@ fi
 
 echo "${SUCCESS}Emacs installed"
 
-emacs --batch --eval "(require 'org)" --eval '(org-babel-tangle-file "config.org")' 
+emacs --batch --eval "(require 'org)" --eval '(org-babel-tangle-file "~/.emacs.d/bin/config.org")' 
 
 if [ $? -ne 0 ];
 then

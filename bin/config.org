@@ -14,9 +14,8 @@ Basic settings for webacs
 
   (setq inhibit-startup-screen t)
   (setq initial-scratch-message nil)
-  (setq gc-cons-threshold 134217728)
-  (setq read-process-output-max 3145728)
 
+  (menu-bar-mode -1)
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
   (global-display-line-numbers-mode)
@@ -96,30 +95,30 @@ Settings for development
 
 #+BEGIN_SRC emacs-lisp
 
-  (use-package magit
-    :bind
-    (("C-x C-m s" . magit-status)
-     ("C-x C-m u" . magit-init)
-     ("C-x C-m r" . magit-add-remote)))
-
-  (use-package company
+  (use-package web-mode
+    :mode
+    (
+      "\\.html\\'"
+      "\\.css\\'"
+      "\\.js\\'"
+      "\\.jsx\\'"
+      "\\.[dgcv][josb]html\\'"
+      "\\.as[pc]x\\'"
+      "\\.[tv][tm]\\'"
+      "\\.twig\\'"
+      "\\.tmpl\\'"
+      "\\.gotmpl\\'"
+      "\\.rhtml\\'"
+      "\\.mustache\\'"
+      "\\.underscore\\'"
+      "\\.blade\\."
+      "\\.[dms][uac][sk][tos]"
+      "\\.[pcevjgfahtsldnx][hstrjbpom][pbsly3k]\\'"
+    )
     :config
-    (setq company-minimum-prefix-length 1)
-    (setq company-idle-delay 0.2)
-    (global-company-mode t))
-
-  (use-package lsp-mode
-    :config
-    (setq lsp-headerline-breadcrumb-enable nil)
-    :hook
-    ((mhtml-mode . lsp)
-     (css-mode . lsp)
-     (scss-mode . lsp)
-     (less-mode . lsp)
-     (js-mode . lsp)
-     (js-jsx-mode . lsp)
-     (json-mode . lsp))
-    :commands
-    lsp)
+    (setq web-mode-markup-indent-offset 2)
+    (setq web-mode-css-indent-offset 2)
+    (setq web-mode-code-indent-offset 2)
+    (setq web-mode-enable-auto-pairing t))
 
 #+END_SRC

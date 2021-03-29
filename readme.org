@@ -2,14 +2,6 @@
 
 The must have Emacs configuration for web development.
 
-* requirements
-To use webacs you must have the following setup:
-
-- [[https://git-scm.com][Git]]
-- [[https://nodejs.org][Node.js >= 14]]
-- [[https://www.gnu.org/software/emacs][Emacs >= 27]]
-- An UNIX based operation system like GNU/Linux or macOS
-
 * getting started
 To get started copy the following lines of code line by line:
 
@@ -34,6 +26,4 @@ The packages that webacs uses:
 - [[https://github.com/Alexander-Miller/treemacs][treemacs]]
 - [[https://github.com/seagle0128/doom-modeline][doom-modeline]]
 - [[https://github.com/hlissner/emacs-doom-themes][doom-themes]]
-- [[https://github.com/magit/magit][magit]]
-- [[https://github.com/company-mode/company-mode][company-mode]]
-- [[https://github.com/emacs-lsp/lsp-mode][lsp-mode]]
+- [[https://github.com/fxbois/web-mode][web-mode]]
