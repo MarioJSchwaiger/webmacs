@@ -1,0 +1,125 @@
+#+TITLE: webacs configuration
+#+PROPERTY: header-args :tangle ../init.el
+
+Welcome to the webacs configuration
+
+* Basic Setup
+Basic settings for webacs
+
+#+BEGIN_SRC emacs-lisp
+
+  (setq-default indent-tabs-mode nil)
+  (setq-default tab-width 2)
+  (setq-default c-basic-offset 2)
+
+  (setq inhibit-startup-screen t)
+  (setq initial-scratch-message nil)
+  (setq gc-cons-threshold 134217728)
+  (setq read-process-output-max 3145728)
+
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1)
+  (global-display-line-numbers-mode)
+
+  (add-to-list 'default-frame-alist '(font . "monospace-12"))
+  (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+#+END_SRC
+
+* Elpa Setup
+Settings to setup elpa
+
+#+BEGIN_SRC emacs-lisp
+
+  (require 'package)
+  (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
+  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+  (package-initialize)
+
+  (unless (package-installed-p 'use-package)
+    (package-refresh-contents)
+    (package-install 'use-package))
+
+  (eval-when-compile (require 'use-package))
+
+  (require 'use-package-ensure)
+  (setq use-package-always-ensure t)
+
+#+END_SRC
+
+* Path Setup
+Settings to gather programs from path
+
+#+BEGIN_SRC emacs-lisp
+
+  (use-package exec-path-from-shell
+    :if (memq window-system '(mac ns x))
+    :config
+    (exec-path-from-shell-initialize))
+
+#+END_SRC
+
+* UI Setup
+Settings for user interface
+
+#+BEGIN_SRC emacs-lisp
+
+  (use-package all-the-icons
+    :config
+    (unless (member "all-the-icons" (font-family-list))
+      (all-the-icons-install-fonts t)))
+
+  (use-package treemacs
+    :defer t
+    :bind
+    (("C-x C-t" . treemacs))
+    :config
+    (add-hook 'treemacs-mode-hook '(lambda (&rest _) (display-line-numbers-mode -1))))
+
+  (use-package doom-modeline
+    :init
+    (doom-modeline-mode 1))
+
+  (use-package doom-themes
+    :config
+    (setq doom-themes-enable-bold t)
+    (setq doom-themes-enable-italic t)
+    (load-theme 'doom-one t)
+    (setq doom-themes-treemacs-theme "doom-colors")
+    (doom-themes-treemacs-config)
+    (doom-themes-org-config))
+
+#+END_SRC
+
+* Development Setup
+Settings for development
+
+#+BEGIN_SRC emacs-lisp
+
+  (use-package magit
+    :bind
+    (("C-x C-m s" . magit-status)
+     ("C-x C-m u" . magit-init)
+     ("C-x C-m r" . magit-add-remote)))
+
+  (use-package company
+    :config
+    (setq company-minimum-prefix-length 1)
+    (setq company-idle-delay 0.2)
+    (global-company-mode t))
+
+  (use-package lsp-mode
+    :config
+    (setq lsp-headerline-breadcrumb-enable nil)
+    :hook
+    ((mhtml-mode . lsp)
+     (css-mode . lsp)
+     (scss-mode . lsp)
+     (less-mode . lsp)
+     (js-mode . lsp)
+     (js-jsx-mode . lsp)
+     (json-mode . lsp))
+    :commands
+    lsp)
+
+#+END_SRC
