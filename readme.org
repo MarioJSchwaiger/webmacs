@@ -16,8 +16,8 @@ To get started copy the following lines of code line by line:
 #+BEGIN_SRC sh
 
   git clone https://github.com/tomoliverxyz/webacs ~/.emacs.d
-  cd .emacs.d/bin
-  ./install.sh
+  cd ~/.emacs.d/bin
+  sh install.sh
 
 #+END_SRC
 
