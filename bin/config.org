@@ -3,7 +3,7 @@
 
 Welcome to the webacs configuration
 
-* Basic Setup
+* basic setup
 Basic settings for webacs
 
 #+BEGIN_SRC emacs-lisp
@@ -26,7 +26,7 @@ Basic settings for webacs
 
 #+END_SRC
 
-* Elpa Setup
+* elpa setup
 Settings to setup elpa
 
 #+BEGIN_SRC emacs-lisp
@@ -47,7 +47,7 @@ Settings to setup elpa
 
 #+END_SRC
 
-* Path Setup
+* path setup
 Settings to gather programs from path
 
 #+BEGIN_SRC emacs-lisp
@@ -59,7 +59,7 @@ Settings to gather programs from path
 
 #+END_SRC
 
-* UI Setup
+* interface setup
 Settings for user interface
 
 #+BEGIN_SRC emacs-lisp
@@ -91,7 +91,7 @@ Settings for user interface
 
 #+END_SRC
 
-* Development Setup
+* development setup
 Settings for development
 
 #+BEGIN_SRC emacs-lisp

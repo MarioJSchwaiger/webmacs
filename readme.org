@@ -1,1 +1,26 @@
 #+TITLE: webacs
+
+The must have Emacs configuration for web development.
+
+* Requirements
+To use webacs you must have the following setup:
+
+- [[https://git-scm.com][Git]]
+- [[https://nodejs.org][Node.js >= 14]]
+- [[https://www.gnu.org/software/emacs][Emacs >= 27]]
+- An UNIX based operation system like GNU/Linux or macOS
+
+* Getting started
+To get started copy the following lines of code line by line:
+
+#+BEGIN_SRC sh
+
+  git clone https://github.com/tomoliverxyz/webacs ~/.emacs.d
+  cd .emacs.d/bin
+  ./install.sh
+
+#+END_SRC
+
+The code above will clone webacs into your home directory and setup your Emacs init file ready for use.
+Once this is done, open Emacs to finish the setup of webacs.
+You can safely ignore the warnings that popup, they are from the configuration theme looking for neotree but treemacs is used instead.
