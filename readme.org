@@ -2,7 +2,7 @@
 
 The must have Emacs configuration for web development.
 
-* Requirements
+* requirements
 To use webacs you must have the following setup:
 
 - [[https://git-scm.com][Git]]
@@ -10,7 +10,7 @@ To use webacs you must have the following setup:
 - [[https://www.gnu.org/software/emacs][Emacs >= 27]]
 - An UNIX based operation system like GNU/Linux or macOS
 
-* Getting started
+* getting started
 To get started copy the following lines of code line by line:
 
 #+BEGIN_SRC sh
