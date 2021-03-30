@@ -112,7 +112,7 @@ Settings for development.
       "\\.mustache\\'"
       "\\.underscore\\'"
       "\\.blade\\."
-      "\\.vue\\."
+      "\\.vue\\'"
       "\\.[dms][uac][sk][tos]"
       "\\.[pcevjgfahtsldnx][hstrjbpom][pbsly3k]\\'"
     )
