@@ -1,0 +1,66 @@
+#!/bin/sh
+
+# Text colors
+ERROR='\033[0;31m'
+SUCCESS='\033[0;32m'
+WHITE='\033[1;37m'
+
+# Tangle
+function tangle {
+  echo "${WHITE}Setting up init file"
+  
+  emacs --batch --eval "(require 'org)" --eval '(org-babel-tangle-file "~/.emacs.d/bin/config.org")' 
+
+  if [ $? -ne 0 ];
+  then
+    echo "${ERROR}Error evaluating Emacs config, please try again"
+    exit
+  fi
+
+  echo "${SUCCESS}Init file successfully setup"
+}
+
+# Install
+function install {
+  echo "${WHITE}Checking Emacs is installed"
+
+  if !command -v emacs &> /dev/null
+  then
+    echo "${ERROR}Error: Emacs not installed, please install Emacs before using Webmacs"
+    exit
+  fi
+
+  echo "${SUCCESS}Emacs installed"
+
+  tangle
+
+  echo "${SUCCESS}Webmacs successfully installed"
+}
+
+# Help
+function help {
+  echo "-h, --help         View this help message"
+  echo "-i, --install	   Install webmacs"
+  echo "-c, --config	   Reload configuration"
+}
+
+# main
+while [ "$1" != "" ];
+do
+  case $1 in
+      -h | --help ) help
+		    exit;;
+      -i | --install ) install
+		       exit;;
+      -c | --config ) tangle
+		      exit;;
+      * ) echo "${ERROR}Illegal option $1"
+	  exit;;
+  esac
+done
+
+if [ "$1" == "" ];
+then
+    help
+    exit
+fi

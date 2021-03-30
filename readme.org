@@ -9,7 +9,7 @@ To get started copy the following lines of code line by line:
 
   git clone https://github.com/tomoliverxyz/webmacs ~/.emacs.d
   cd ~/.emacs.d/bin
-  sh install.sh
+  sh webmacs.sh --install
 
 #+END_SRC
 
