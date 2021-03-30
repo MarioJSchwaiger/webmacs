@@ -105,16 +105,13 @@ Settings for development.
       "\\.[dgcv][josb]html\\'"
       "\\.as[pc]x\\'"
       "\\.[tv][tm]\\'"
-      "\\.twig\\'"
-      "\\.tmpl\\'"
       "\\.gotmpl\\'"
       "\\.rhtml\\'"
       "\\.mustache\\'"
       "\\.underscore\\'"
       "\\.blade\\."
-      "\\.vue\\'"
-      "\\.[dmsl][uace][sk][tos]"
-      "\\.[pcevjgfahtsldnx][hstrjbpom][pbsly3k]\\'"
+      "\\.[dmslt][uacewm][skip][tosgl]\\'"
+      "\\.[pcevjgfahtsldnx][hstrjbpomu][pbsly3ke]\\'"
     )
     :config
     (setq web-mode-markup-indent-offset 2)
