@@ -113,7 +113,7 @@ Settings for development.
       "\\.underscore\\'"
       "\\.blade\\."
       "\\.vue\\'"
-      "\\.[dms][uac][sk][tos]"
+      "\\.[dmsl][uace][sk][tos]"
       "\\.[pcevjgfahtsldnx][hstrjbpom][pbsly3k]\\'"
     )
     :config
@@ -121,5 +121,11 @@ Settings for development.
     (setq web-mode-css-indent-offset 2)
     (setq web-mode-code-indent-offset 2)
     (setq web-mode-enable-auto-pairing t))
+
+  (use-package magit
+    :bind
+    (("C-x C-m s" . magit-status)
+     ("C-x C-m i" . magit-init)
+     ("C-x C-m r" . magit-add-remote)))
 
 #+END_SRC
