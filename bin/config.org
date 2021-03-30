@@ -123,6 +123,10 @@ Settings for development.
     :bind
     (("C-x C-m s" . magit-status)
      ("C-x C-m i" . magit-init)
-     ("C-x C-m r" . magit-add-remote)))
+     ("C-x C-m r" . magit-add-remote)
+     ("C-x C-m f" . magit-stage-file)
+     ("C-x C-m s" . magit-stage-modifed)
+     ("C-x C-m p" . magit-push)
+     ("C-x C-m g" . magit-pull)))
 
 #+END_SRC
