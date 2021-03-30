@@ -52,12 +52,15 @@ do
   case $1 in
     -h | --help ) help
 		  exit;;
-    -i | --install ) install
+    -i | --install ) echo "${WHITE}Webmacs:"
+	             install
 		     exit;;
-    -c | --config ) tangle
+    -c | --config ) echo "${WHITE}Webmacs:"
+	            tangle
 		    echo "${WHITE}Restart or open Emacs to reload init file"
 		    exit;;
-    * ) echo "${ERROR}Illegal option $1"
+    * ) echo "${WHITE}Webmacs:"
+	echo "${ERROR}Illegal option $1"
 	exit;;
   esac
 done
