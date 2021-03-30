@@ -27,3 +27,4 @@ The packages that webmacs uses:
 - [[https://github.com/seagle0128/doom-modeline][doom-modeline]]
 - [[https://github.com/hlissner/emacs-doom-themes][doom-themes]]
 - [[https://github.com/fxbois/web-mode][web-mode]]
+- [[https://github.com/magit/magit][magit]]
