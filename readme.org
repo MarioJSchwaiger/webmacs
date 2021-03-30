@@ -1,24 +1,24 @@
-#+TITLE: webacs
+#+TITLE: Webmacs
 
 The must have Emacs configuration for web development.
 
-* getting started
+* Getting Started
 To get started copy the following lines of code line by line:
 
 #+BEGIN_SRC sh
 
-  git clone https://github.com/tomoliverxyz/webacs ~/.emacs.d
+  git clone https://github.com/tomoliverxyz/webmacs ~/.emacs.d
   cd ~/.emacs.d/bin
   sh install.sh
 
 #+END_SRC
 
-The code above will clone webacs into your home directory and setup your Emacs init file ready for use.
-Once this is done, open Emacs to finish the setup of webacs.
+The code above will clone webmacs into your home directory and setup your Emacs init file ready for use.
+Once this is done, open Emacs to finish the setup of webmacs.
 You can safely ignore the warnings that popup, they are from the configuration theme looking for neotree but treemacs is used instead.
 
-* packages
-The packages that webacs uses:
+* Packages
+The packages that webmacs uses:
 
 - [[https://github.com/jwiegley/use-package][use-package]]
 - [[https://github.com/purcell/exec-path-from-shell][exec-path-from-shell]]

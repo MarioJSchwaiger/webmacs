@@ -1,10 +1,10 @@
-#+TITLE: webacs configuration
-#+PROPERTY: header-args :tangle ../init.el
+#+TITLE: Webmacs Configuration
+#+PROPERTY: header-args :tangle ~/.emacs.d/init.el
 
-Welcome to the webacs configuration
+Welcome to the webmacs configuration.
 
-* basic setup
-Basic settings for webacs
+* Basic Setup
+Basic settings for webacs.
 
 #+BEGIN_SRC emacs-lisp
 
@@ -25,8 +25,8 @@ Basic settings for webacs
 
 #+END_SRC
 
-* elpa setup
-Settings to setup elpa
+* Elpa Setup
+Settings to setup elpa.
 
 #+BEGIN_SRC emacs-lisp
 
@@ -46,8 +46,8 @@ Settings to setup elpa
 
 #+END_SRC
 
-* path setup
-Settings to gather programs from path
+* Path Setup
+Settings to gather programs from path.
 
 #+BEGIN_SRC emacs-lisp
 
@@ -58,8 +58,8 @@ Settings to gather programs from path
 
 #+END_SRC
 
-* interface setup
-Settings for user interface
+* Interface Setup
+Settings for user interface.
 
 #+BEGIN_SRC emacs-lisp
 
@@ -90,8 +90,8 @@ Settings for user interface
 
 #+END_SRC
 
-* development setup
-Settings for development
+* Development Setup
+Settings for development.
 
 #+BEGIN_SRC emacs-lisp
 
