@@ -35,32 +35,35 @@ function install {
   tangle
 
   echo "${SUCCESS}Webmacs successfully installed"
+  echo "${WHITE}Open Emacs to finish setup of webmacs"
 }
 
 # Help
 function help {
-  echo "-h, --help         View this help message"
-  echo "-i, --install	   Install webmacs"
-  echo "-c, --config	   Reload configuration"
+  echo "Webmacs:"
+  echo "  -h, --help       View this help message"
+  echo "  -i, --install	   Install webmacs"
+  echo "  -c, --config	   Reload configuration"
 }
 
 # main
 while [ "$1" != "" ];
 do
   case $1 in
-      -h | --help ) help
+    -h | --help ) help
+		  exit;;
+    -i | --install ) install
+		     exit;;
+    -c | --config ) tangle
+		    echo "${WHITE}Restart or open Emacs to reload init file"
 		    exit;;
-      -i | --install ) install
-		       exit;;
-      -c | --config ) tangle
-		      exit;;
-      * ) echo "${ERROR}Illegal option $1"
-	  exit;;
+    * ) echo "${ERROR}Illegal option $1"
+	exit;;
   esac
 done
 
 if [ "$1" == "" ];
 then
-    help
-    exit
+  help
+  exit
 fi
