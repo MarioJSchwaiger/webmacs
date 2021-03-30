@@ -100,8 +100,8 @@ Settings for development.
     (
       "\\.html\\'"
       "\\.css\\'"
-      "\\.js\\'"
-      "\\.jsx\\'"
+      "\\.[jt]s\\'"
+      "\\.[jt]sx\\'"
       "\\.[dgcv][josb]html\\'"
       "\\.as[pc]x\\'"
       "\\.[tv][tm]\\'"
